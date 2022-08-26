@@ -45,6 +45,7 @@ body {
 
 * {
   margin: 0;
+  padding: 0;
   font-weight: 100;
   font-family: 'Worldwide';
 }
@@ -63,7 +64,7 @@ header {
   flex-direction: column;
   background-color: var(--black);
   color: var(--white);
-  background-image: url(../img/barber2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../img/barber2.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 90%;
@@ -76,6 +77,7 @@ header nav {
   padding: 2rem 8rem;
   flex-wrap: wrap;
 }
+
 
 .logo {
   display: flex;
@@ -203,10 +205,10 @@ form {
 }
 
 .clear:hover {
-  background-color: var(--goldFont);
-  color: var(--white);
+  background-color: var(--goldBack);
+  color: var(--black);
   padding: .75rem 1.25rem;
-  border: 1px solid var(--goldFont);
+  border: transparent;
 }
 
 .experience {
@@ -241,12 +243,16 @@ form {
   justify-content: center;
   padding: 6rem 2rem;
   max-width: 50rem;
-  gap: 1.8rem;
+  gap: 1.1rem;
 }
 
 .exp-2 h2 {
   color: var(--goldFont);
   font-size: 2.5rem;
+}
+
+.exp-2 p {
+  padding-bottom: 1rem;
 }
 
 .our-services {
@@ -317,22 +323,30 @@ form {
   padding: .5rem 0 1.5rem;
 }
 
+
+
 @media (min-width: 600px) and (max-width: 1200px) {
   header {
-    background-blend-mode: overlay;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../img/barber2.jpg);
     padding-bottom: 2rem;
   }
 
   header nav {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 2rem 2rem 0 2rem;
   }
 
-  ul.logo {
-    padding-right: 1.5rem;
+  .links{
+    padding-bottom: 10rem;
+  }
+
+  .info {
+    max-width: 22rem;
+    margin: 4rem 5rem;
   }
 
   .logo h3 {
@@ -344,6 +358,10 @@ form {
   .social {
     margin: 0;
     padding: 0;
+  }
+
+  .links{
+    padding-bottom: 0.5rem;
   }
 
   .service {
@@ -381,12 +399,19 @@ form {
     margin: 0;
     padding: 0;
   }
-  
+
+  .links a{
+    font-size: 1rem;
+  }
+
   .info {
     align-self: center;
-    padding: 0 1rem;
-    min-width: 22rem;
-    margin-top: 1rem;
+    padding: 0 .5rem;
+    margin: 1rem 0 5rem;
+  }
+
+  .info h1 {
+    font-size: 3.7rem;
   }
 
   .experience {
@@ -398,7 +423,10 @@ form {
   }
 
   .exp-2 {
+    align-items: center;
+    text-align: center;
     padding: 3rem 2rem 4rem;
+    align-self: center;
   }
 
   .service {
