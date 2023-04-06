@@ -5,24 +5,40 @@
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
+:root {
+  --goldBack: #ae956d;
+  --goldFont: #d9a554;
+  --black: #151515;
+  --white: #ffffff;
+}
+
+@font-face {
+  font-family: Worldwide;
+  src: url(/fonts/Worldwide.ttf);
+}
+
+@font-face {
+  font-family: Accord;
+  src: url(/fonts/Accord.ttf);
+}
 
 body {
-
+  background-color: var(--goldBack);
 }
 
 
@@ -30,12 +46,128 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
-
+  background-color: var(--black);
+  color: var(--white);
+  background-image: url(/img/barber2.jpg);
+  background-repeat: no-repeat; 
+  background-position: 87% top;
+  background-size: 41rem, cover;
+  background-attachment: fixed; 
 }
 
-footer {
-
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8rem;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Worldwide', serif;
+}
+
+.logo h3 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.logo img {
+  width: 2.5rem;
+}
+
+.logo {
+  gap: 0;
+}
+
+.social img {
+  width: 1.25rem;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+}
+
+header li {
+  list-style: none;
+}
+
+header li a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Accord', sans-serif;
+  font-size: .9rem;
+}
+
+header span {
+  color: var(--goldFont)
+}
+
+main {
+  font-weight: 100;
+  padding: 4rem 10.5rem;
+  height: 70vh;
+  width: 60rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+main h1 {
+  font-size: 3rem;
+  font-family: 'Worldwide', serif;
+  font-weight: 100;
+}
+
+main p {
+  font-family: 'Accord';
+  font-weight: 100;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+main a {
+  font-family: 'Accord';
+  font-weight: 100;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+.gold:hover,
+.clear:hover {
+  cursor: pointer;
+}
+
+.gold {
+  background-color: var(--goldFont);
+  color: var(--black);
+  padding: .75rem 1.25rem;
+  border: 1px solid var(--goldFont);
+}
+
+.clear {
+  background-color: var(--black);
+  color: var(--goldFont);
+  padding: .75rem 1.25rem;
+  border: 1px solid var(--goldFont);
+}
+
+@media screen and (max-width(844px)) {
+  main{
+    
+    grid-template-columns: 1fr;
+  }
+}
+
+
+footer {}
 
 /******************************************
 /* ADDITIONAL STYLES
