@@ -48,11 +48,11 @@ body {
 header {
   background-color: var(--black);
   color: var(--white);
-  background-image: url(img/barber2.jpg);
+  /* background-image: url(/img/barber2.jpg);
   background-repeat: no-repeat; 
   background-position: 87% top;
   background-size: 41rem, cover;
-  background-attachment: fixed; 
+  background-attachment: fixed;  */
 }
 
 header nav {
@@ -108,11 +108,11 @@ header span {
 
 main {
   font-weight: 100;
-  padding: 4rem 10.5rem;
+  /* padding: 4rem 10.5rem; */
   height: 70vh;
-  width: 60rem;
+  /* width: 60rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; */
 }
 
 
