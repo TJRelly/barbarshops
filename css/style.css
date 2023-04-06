@@ -48,7 +48,7 @@ body {
 header {
   background-color: var(--black);
   color: var(--white);
-  background-image: url(/img/barber2.jpg);
+  background-image: url(img/barber2.jpg);
   background-repeat: no-repeat; 
   background-position: 87% top;
   background-size: 41rem, cover;
