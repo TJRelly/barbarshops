@@ -54,8 +54,12 @@ header {
 header nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 4rem;
+  padding: 0 8rem;
   flex-wrap: wrap;
+}
+
+.logo, .links, .social{
+  padding: 0;
 }
 
 h1, h2, h3{
@@ -97,7 +101,7 @@ h1, h2, h3{
 
 header ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 header li {
