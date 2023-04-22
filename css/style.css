@@ -40,38 +40,41 @@
 
 body {
   background-color: var(--goldBack);
+  font-size: 1.2rem;
+}
+
+* {
+  margin: 0;
+  font-weight: 100;
+  font-family: 'Worldwide';
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
+h2 {
+  font-size: 2.5rem;
+
+}
+
 header {
   display: flex;
   flex-direction: column;
   background-color: var(--black);
   color: var(--white);
-  height: 45rem;
+  background-image: url(../img/barber2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  padding-bottom: 8.75rem;
 }
 
 header nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 8rem;
+  padding: 2rem 8rem;
   flex-wrap: wrap;
-}
-
-.logo,
-.links,
-.social {
-  padding: 0;
-}
-
-h1,
-h2,
-h3 {
-  font-family: Worldwide;
-  font-weight: 100;
 }
 
 .logo {
@@ -103,7 +106,7 @@ h3 {
 }
 
 .social img {
-  width: 1.25rem;
+  width: 1.5rem;
 }
 
 header ul {
@@ -120,7 +123,7 @@ header li {
   text-decoration: none;
   color: var(--white);
   font-family: 'Accord', sans-serif;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .links a:hover {
@@ -134,7 +137,7 @@ header span {
 p {
   font-family: 'Accord';
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.6;
   color: var(--white);
 }
 
@@ -146,24 +149,11 @@ p {
 
 .info {
   max-width: 22rem;
-  margin: 4rem 8rem;
+  margin: 4rem 10rem;
 }
-
-/* .hero-column-2 {
-  display: flex;
-  justify-content: center;
-  max-height: 75vh;
-  position: static;
-}
-
-.hero-column-2 img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-} */
 
 main h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: 'Worldwide', serif;
   font-weight: 100;
 }
@@ -195,6 +185,13 @@ form {
   border: 1px solid var(--goldFont);
 }
 
+.gold:hover {
+  background-color: var(--black);
+  color: var(--goldFont);
+  padding: .75rem 1.25rem;
+  border: 1px solid var(--goldFont);
+}
+
 .clear {
   background-color: var(--black);
   color: var(--goldFont);
@@ -202,53 +199,135 @@ form {
   border: 1px solid var(--goldFont);
 }
 
+.clear:hover {
+  background-color: var(--goldFont);
+  color: var(--white);
+  padding: .75rem 1.25rem;
+  border: 1px solid var(--goldFont);
+}
+
 .experience {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   background-color: var(--grey);
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-items: center;
 }
 
 .exp-1 {
-  margin: 0 auto;
+  max-width: min-content;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
 }
 
 .exp-1 span {
   color: var(--goldFont);
-  font-size: 3.5rem;
+  font-size: 5rem;
 }
 
 .exp-1 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--white);
-  width: 5rem;
 }
 
 .exp-2 {
-  margin: 0 auto;
-  padding: 0 2rem 2rem;
-  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 2rem;
+  max-width: 50rem;
+  gap: 1.8rem;
 }
 
 .exp-2 h2 {
   color: var(--goldFont);
+  font-size: 2.5rem;
 }
 
-.exp-2-items {
-  max-width: 31rem;
+.our-services {
+  display: flex;
+  flex-direction: column;
+  background: var(--black);
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0 6rem;
 }
 
-@media screen and (max-width: 992px) {
+.our-services h2{
+  font-size: 3rem;
+  color: var(--goldFont);
+}
+
+.our-services h3{
+  font-family: 'Accord';
+  font-weight: 200;
+}
+
+.our-services p{
+  text-align: center;
+  padding: 2rem 2rem 2.5rem;
+}
+
+.service{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.service-item{
+  border: 1px solid var(--goldFont);
+  min-width: 15rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6rem;
+}
+
+.service-item span{
+  color: var(--goldFont);
+  font-family: 'Accord';
+  font-weight: 200;
+}
+
+.service-item .title{
+  padding: 2.5rem 0 0 0;
+}
+
+.charge{
+  padding: 1rem 0 1.5rem;
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  header {
+    background-blend-mode: overlay;
+    padding-bottom: 2rem;
+  }
+
+  .service{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    background-blend-mode: overlay;
+    padding-bottom: 2rem;
+  }
+
   header nav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 2rem 2rem;
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  ul.logo {
+    padding-right: 1.5rem;
   }
 
   .logo h3 {
@@ -264,19 +343,29 @@ form {
 
   .info {
     align-self: center;
-    padding: 0;
+    padding: 0 1rem;
     min-width: 22rem;
+    margin-top: 1rem;
+  }
+
+  .experience {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-1 {
+    padding-top: 2rem;
   }
 
   .exp-2 {
-    padding: 0 3rem 4rem;
+    padding: 3rem 2rem 4rem;
   }
 
-  .exp-1 h2 {
-    font-size: 2rem;
-    color: var(--white);
-    width: 100%;
+  .service{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
+
 }
 
 footer {}
