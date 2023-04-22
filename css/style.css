@@ -47,8 +47,11 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
+  display: flex;
+  flex-direction: column;
   background-color: var(--black);
   color: var(--white);
+  height: 45rem;
 }
 
 header nav {
@@ -58,11 +61,15 @@ header nav {
   flex-wrap: wrap;
 }
 
-.logo, .links, .social{
+.logo,
+.links,
+.social {
   padding: 0;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   font-family: Worldwide;
   font-weight: 100;
 }
@@ -108,7 +115,7 @@ header li {
   list-style: none;
 }
 
-header li a {
+.links a {
   list-style: none;
   text-decoration: none;
   color: var(--white);
@@ -116,37 +123,33 @@ header li a {
   font-size: .9rem;
 }
 
+.links a:hover {
+  color: var(--goldFont);
+}
+
 header span {
   color: var(--goldFont)
 }
 
-p{
+p {
   font-family: 'Accord';
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.4;
   color: var(--white);
 }
 
-
-
 .hero {
-  max-height: 75vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-}
-
-.hero-column-1 {
+  height: 100%;
   display: flex;
-  justify-content: center;
-  position: static;
+  flex-direction: column;
 }
 
 .info {
-  padding: 4rem 0;
   max-width: 22rem;
+  margin: 4rem 8rem;
 }
 
-.hero-column-2 {
+/* .hero-column-2 {
   display: flex;
   justify-content: center;
   max-height: 75vh;
@@ -157,7 +160,7 @@ p{
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-}
+} */
 
 main h1 {
   font-size: 3rem;
@@ -166,7 +169,6 @@ main h1 {
 }
 
 main p {
-  
   margin-bottom: 2rem;
 }
 
@@ -203,9 +205,6 @@ form {
 .experience {
   display: flex;
   background-color: var(--grey);
-  position: relative;
-  min-height: 25vh;
-  max-height: fit-content;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -218,28 +217,28 @@ form {
   align-items: center;
 }
 
-.exp-1 span{
+.exp-1 span {
   color: var(--goldFont);
   font-size: 3.5rem;
 }
 
-.exp-1 h2{
+.exp-1 h2 {
   font-size: 2rem;
   color: var(--white);
   width: 5rem;
 }
 
-.exp-2{
+.exp-2 {
   margin: 0 auto;
   padding: 0 2rem 2rem;
   max-height: fit-content;
 }
 
-.exp-2 h2{
+.exp-2 h2 {
   color: var(--goldFont);
 }
 
-.exp-2-items{
+.exp-2-items {
   max-width: 31rem;
 }
 
@@ -252,24 +251,28 @@ form {
     padding: 2rem 2rem;
   }
 
-  .logo h3{
+  .logo h3 {
     margin: 0;
   }
 
-  .logo, .links, .social{
+  .logo,
+  .links,
+  .social {
     margin: 0;
     padding: 0;
   }
 
-  .info{
-    padding: 0 0 4rem;
+  .info {
+    align-self: center;
+    padding: 0;
+    min-width: 22rem;
   }
 
-  .exp-2{
+  .exp-2 {
     padding: 0 3rem 4rem;
   }
 
-  .exp-1 h2{
+  .exp-1 h2 {
     font-size: 2rem;
     color: var(--white);
     width: 100%;
