@@ -14,6 +14,8 @@ window.onscroll = function () {
         social.style.display = 'none'
     } else {
         nav.style.backgroundColor = 'transparent'
+        nav.style.padding = ''
+        nav.style.justifyContent = ''
         logo.style.display = ''
         social.style.display = ''
     }
