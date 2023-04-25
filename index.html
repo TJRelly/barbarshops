@@ -6,7 +6,7 @@
 	<meta name="description" content="Your description goes here">
 	<meta name="keywords" content="barber, shave, haircut">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<!-- external CSS link -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -15,15 +15,15 @@
 </head>
 
 <body>
-	<header>
-		<nav id="home">
+	<header class="sticky">
+		<nav class="navbar">
 			<ul class="logo">
-				<li><img src="img/barber icon.png" alt="scissors icon"></li>
+				<li class=".icon"><img src="img/barber icon.png" alt="scissors icon"></li>
 				<li>
-					<h3>Barbers</h3>
+					<h3>Barbers Inc.</h3>
 				</li>
 			</ul>
-			<ul class="links sticky">
+			<ul class="links">
 				<li><a href="#home">Home</a></li>
 				<li><a href="#about">About</a></li>
 				<li><a href="#services">Services</a></li>
@@ -37,47 +37,46 @@
 				<li><a href="#"><img src="img/twitter.png" alt="twitter icon"></a></li>
 			</ul>
 		</nav>
-		<main class="hero">
-
-			<div class="info">
-				<h1>Getting you <span>handsome</span> is our goal</h1>
-
-				<p>Get the perfect cut every time at the barbershop that cares about you and your personal style</p>
-
-				<form action="">
-					<button type="submit" class="gold">Appointment</button>
-					<button type="submit" class="clear">Contact us</button>
-				</form>
-			</div>
-
-		</main>
-
-		<!-- <div>
-				<span>Review</span>
-				<img src="" alt="circle with pic">
-				<span>John Doe</span><br><span>2 months ago</span>
-				<p>Barber cuts hair with care and <br>attention to detail. A really good <br> barber who knows his
-					business.</p>
-			</div>
-
-			<div>
-				<img src="" alt="icon">
-				<span>Monthy Care Bundle</span>
-				<span>John Doe</span><br><span>2 months ago</span>
-				<p>Barber cuts hair with care and <br>attention to detail. A really good <br> barber who knows his
-					business.</p>
-			</div> -->
-
 	</header>
 
-	<section class="experience" id="about">
-		<div class="exp-1">
+	<section id="home" class="hero-section">
+		<section class="hero">
+			<h1>Getting you <span>handsome</span> is our goal</h1>
+
+			<p>Get the perfect cut every time at the barbershop that cares about you and your personal style</p>
+
+			<form action="">
+				<button type="submit" class="gold">Appointment</button>
+				<button type="submit" class="clear">Contact us</button>
+			</form>
+		</section>
+	</section>
+
+	<!-- <div>
+					<span>Review</span>
+					<img src="" alt="circle with pic">
+					<span>John Doe</span><br><span>2 months ago</span>
+					<p>Barber cuts hair with care and <br>attention to detail. A really good <br> barber who knows his
+						business.</p>
+				</div>
+	
+				<div>
+					<img src="" alt="icon">
+					<span>Monthy Care Bundle</span>
+					<span>John Doe</span><br><span>2 months ago</span>
+					<p>Barber cuts hair with care and <br>attention to detail. A really good <br> barber who knows his
+						business.</p>
+				</div> -->
+
+	<section class="about" id="about">
+		<div class="about-exp">
 			<span>20</span>
 			<h2>Years Experience</h2>
 		</div>
-		<div class="exp-2">
+		<div class="about-info">
 			<h2>Who we are</h2>
-			<p>Barber is a team of passionate and experienced professionals dedicated to providing the highest quality
+			<p>Barber is a team of passionate and experienced professionals dedicated to providing the highest
+				quality
 				hair styling tools on the market. Our mission is to hel you acieve your best hair day. every day. We
 				belive that beauty should be accessible to everyone, whis why we offer affordable and innovative
 				products that are easy to use and deliver professional results.</p>
@@ -120,7 +119,7 @@
 
 	</section>
 
-	<section>
+	<section class="featured">
 		<h2>We are featured on</h2>
 		<li><img src="#" alt="swagger icon"></li>
 		<li><img src="#" alt="AnOther icon"></li>
@@ -129,7 +128,7 @@
 		<li><img src="#" alt="Time icon"></li>
 	</section>
 
-	<section>
+	<section class="hours">
 		<img src="#" alt="">
 		<div>
 			<h2>Working hours</h2>
@@ -142,14 +141,15 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="gallery">
 		<h3>Featured gallery</h3>
 		<img src="#" alt="a collage of haircuts">
 	</section>
 
-	<section>
+	<section class="meet">
 		<h3>Meet our team</h3>
-		<p>Our skilled and experienced barbers are passionate about their work and commited to <br>providing the best
+		<p>Our skilled and experienced barbers are passionate about their work and commited to <br>providing the
+			best
 			possible service. Come in and meet the team today.</p>
 		<div>
 			<img src="#" alt="person">
@@ -173,27 +173,19 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="testimonial">
 		<img src="#" alt="quote on frame">
 		<h2>Client says</h2>
-		<p>Barbers cut hair with care and attention to detail. Their <br>expertise and professionalism are evident in
-			their careful <br>approach to cutting hair. Wiht their knowledge and <br>experience, they deliver top-notch
+		<p>Barbers cut hair with care and attention to detail. Their <br>expertise and professionalism are evident
+			in
+			their careful <br>approach to cutting hair. Wiht their knowledge and <br>experience, they deliver
+			top-notch
 			haircuts that leave <br>customers feeling confident and satisfied.</p>
 		<img src="#" alt="quote icon">
 		<span>-Adam Smith</span>
 	</section>
 
-	<section>
-		<img src="#" alt="quote on frame">
-		<h2>Client says</h2>
-		<p>Barbers cut hair with care and attention to detail. Their <br>expertise and professionalism are evident in
-			their careful <br>approach to cutting hair. Wiht their knowledge and <br>experience, they deliver top-notch
-			haircuts that leave <br>customers feeling confident and satisfied.</p>
-		<img src="#" alt="quote icon">
-		<span>-Adam Smith</span>
-	</section>
-
-	<section>
+	<section class="news">
 		<h2>Latest news & blog</h2>
 		<p>Stay up-to-date with the latest trends and groomin tips. Our blog features expert advice and <br>insider
 			knowledge to help you look your best. Check back often for new posts and insights.</p>
@@ -210,7 +202,7 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="appointment">
 		<div>
 			<h2>Book your <br>appointment online</h2>
 			<p>Schedule your next haircut service online. Our <br>online booking in fast and available 24/7. Book
@@ -225,7 +217,8 @@
 			<div>
 				<img src="#" alt="scissors icon">
 				<h3>Barbers</h3>
-				<p>Barbers is a team of passionate and experienced <br>professionals dedicated to providing the highest
+				<p>Barbers is a team of passionate and experienced <br>professionals dedicated to providing the
+					highest
 					<br>quality hair styling tools on the market.
 				</p>
 				<ul>
