@@ -50,7 +50,6 @@ body {
   font-family: 'Worldwide';
 }
 
-
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -87,7 +86,7 @@ h2 {
   z-index: 1;
 }
 
-.color-change{
+.color-change {
   background: var(--black);
 }
 
@@ -334,7 +333,59 @@ form {
   padding: .5rem 0 1.5rem;
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
+.featured {
+  background: var(--grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6rem;
+}
+
+.featured .title {
+  color: var(--goldFont);
+  padding: 6rem 0 3rem 0;
+
+}
+
+.featured .icons {
+  display: flex;
+  color: var(--goldFont);
+  list-style: none;
+  gap: 5rem;
+  align-items: center;
+}
+
+.featured .icons img {
+  width: 8rem;
+}
+
+.featured .oprah img {
+  width: 12rem;
+}
+
+.featured .vogue img{
+  width: 12rem;
+}
+
+.featured .esquire img {
+  width: 12rem;
+}
+
+.hours {
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hours h2{
+  color: var(--goldFont);
+  padding: 6rem 0 2rem 0;
+}
+
+@media (max-width: 1200px) {
   .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../img/barber2.jpg);
     padding: 8rem 2rem 3rem;
@@ -374,27 +425,60 @@ form {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
+
+  .featured .icons {
+    /* flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 2.5rem;
+    /* background: lightblue; */
+  }
 }
 
 
-@media (min-width: 600px) and (max-width: 800px) {
+@media (max-width: 800px) {
+  body {
+    position: relative;
+  }
+
   .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(../img/barber2.jpg);
     background-size: cover;
     padding: 8.75rem 2rem 4rem;
   }
 
- .navbar {
+  .show-nav {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 2rem;
+    align-items: start;
+    padding-left: 4rem;
+    background: black;
+    width: 75%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
   }
 
-  .links {
-    padding-bottom: 10rem;
+  .show-nav ul{
+    flex-direction: column;
+  }
+
+  .show-nav .logo {
+    flex-direction: row;
+  }
+
+  .show-nav .social {
+    flex-direction: row;
+    padding-top: 4rem;
+  }
+
+  .show-nav ul.links {
+    align-items: start;
+  }
+
+  .show-nav .links{
+    flex-direction: column;
+    padding-top: 4rem;
   }
 
   .hero {
@@ -422,6 +506,12 @@ form {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
+
+  .featured .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -431,7 +521,7 @@ form {
   }
 
   .navbar {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -487,6 +577,11 @@ form {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .featured .icons {
+    flex-direction: column;
+    gap: 2.5rem;
   }
 
 }
