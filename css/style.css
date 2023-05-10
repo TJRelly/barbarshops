@@ -72,12 +72,21 @@ h2 {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-self: center;
   padding: 2rem 8rem;
   flex-wrap: wrap;
   background: transparent;
   position: absolute;
   width: 100%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .hamburger-menu {
+  display: none;
+}
+
+.navbar .close-menu {
+  display: none;
 }
 
 .sticky {
@@ -141,11 +150,20 @@ h2 {
   color: var(--white);
   font-family: 'Accord', sans-serif;
   font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .links a:hover {
-  transition: color 0.3s ease;
+  transition: color 0.2s ease-in-out;
   color: var(--goldFont);
+}
+
+.social li {
+  transition: 0.2s ease-in-out;
+}
+
+.social li:hover {
+  transform: scale(1.5);
 }
 
 .hero-section span {
@@ -364,7 +382,7 @@ form {
   width: 12rem;
 }
 
-.featured .vogue img{
+.featured .vogue img {
   width: 12rem;
 }
 
@@ -380,7 +398,7 @@ form {
   align-items: center;
 }
 
-.hours h2{
+.hours h2 {
   color: var(--goldFont);
   padding: 6rem 0 2rem 0;
 }
@@ -427,12 +445,10 @@ form {
   }
 
   .featured .icons {
-    /* flex-direction: column; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
     gap: 2.5rem;
-    /* background: lightblue; */
   }
 }
 
@@ -443,47 +459,119 @@ form {
   }
 
   .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(../img/barber2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(../img/barber2.jpg);
     background-size: cover;
     padding: 8.75rem 2rem 4rem;
   }
 
+  nav .links,
+  nav .social {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navbar .hamburger-menu {
+    display: flex;
+    width: 2.5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+
+  .navbar .hamburger-menu:hover {
+    transform: scale(1.2);
+  }
+
   .show-nav {
     display: flex;
+    flex-direction: column;
+    justify-content: start;
     align-items: start;
-    padding-left: 4rem;
-    background: black;
+    background: var(--black);
     width: 75%;
     height: 100vh;
     position: absolute;
     right: 0;
   }
 
-  .show-nav ul{
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    background: var(--goldBack);
+    opacity: 0.75;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+
+  .show-nav .hamburger-menu {
+    display: none;
+  }
+
+  .show-nav .close-menu {
+    display: block;
+    width: 2.5rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+  }
+
+  .show-nav .close-menu:hover {
+    transform: scale(1.2);
+  }
+
+  .show-nav ul {
+    display: flex;
     flex-direction: column;
   }
 
   .show-nav .logo {
+    display: flex;
     flex-direction: row;
   }
 
   .show-nav .social {
+    display: flex;
     flex-direction: row;
     padding-top: 4rem;
   }
 
   .show-nav ul.links {
+    display: flex;
     align-items: start;
   }
 
-  .show-nav .links{
+  .show-nav .links {
+    display: flex;
     flex-direction: column;
     padding-top: 4rem;
   }
 
+  .hero-section {
+    padding-top: 6rem;
+  }
+
   .hero {
-    max-width: 22rem;
-    margin: 4rem 5rem;
+    align-self: center;
+    padding: 0 1.1rem;
+    margin: 1rem 0 5rem;
+  }
+
+  .hero h1 {
+    font-size: 3.7rem;
   }
 
   .logo h3 {
@@ -521,11 +609,7 @@ form {
   }
 
   .navbar {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 2rem;
+    display: flex;
   }
 
   ul.logo {
@@ -533,7 +617,12 @@ form {
   }
 
   .logo h3 {
+    font-size: 1.1rem;
     margin: 0;
+  }
+
+  .logo img {
+    width: 2rem;
   }
 
   .logo,
@@ -545,6 +634,10 @@ form {
 
   .links a {
     font-size: 1rem;
+  }
+
+  .hero-section {
+    padding-top: 3.25rem;
   }
 
   .hero {
@@ -584,6 +677,9 @@ form {
     gap: 2.5rem;
   }
 
+  .hero form{
+    display: grid;
+  }
 }
 
 footer {}
