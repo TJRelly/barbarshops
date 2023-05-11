@@ -17,7 +17,7 @@ function toggleMenu() {
     navLeft.classList.toggle("overlay")
 }
 
-let media800 = window.matchMedia("(max-width: 800px)")
+let media800 = window.matchMedia("(max-width: 875px)")
 myFunction(media800) // Call listener function at run time
 media800.addListener(myFunction) // Attach listener function on state changes
 
