@@ -661,6 +661,7 @@ form {
 }
 
 .book h2 {
+  color: var(--white);
   border-right: 1px solid gold;
   padding-right: 3rem;
 }
@@ -673,12 +674,12 @@ footer {
 }
 
 footer .top {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 6rem 8rem;
-  gap: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 6rem 2rem;
+  gap: 4rem;
   place-content: center;
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid var(--goldFont);
 }
 
 footer .bottom {
@@ -693,6 +694,68 @@ footer .terms {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+  max-width: 25rem;
+}
+
+.company-info ul {
+  list-style: none;
+}
+
+.company-info .social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contacts ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contacts li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.contacts img {
+  width: 1.2rem;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+  max-width: 25rem;
+}
+
+.subscribe {
+  max-width: 25rem;
+  display: flex;
+}
+
+.subscribe label {
+  display: none;
+}
+
+.subscribe input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--goldFont);
 }
 
 @media (max-width: 1200px) {
@@ -746,16 +809,19 @@ footer .terms {
     place-items: center;
     gap: 2.5rem;
   }
-}
 
-.hours img {
-  max-width: 27.5rem;
-}
+  .hours img {
+    max-width: 27.5rem;
+  }
 
-.scrolled {
-  padding: 1rem 2rem;
-}
+  .scrolled {
+    padding: 1rem 2rem;
+  }
 
+  footer .top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media (max-width: 875px) {
   body {
@@ -931,7 +997,6 @@ footer .terms {
   }
 
   .collage {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
@@ -942,13 +1007,16 @@ footer .terms {
 
   .book h2 {
     border-right: none;
-    border-bottom: 1px solid gold;
+    border-bottom: 1px solid var(--goldFont);
     padding-bottom: 3rem;
   }
 
+  footer .top {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .hero-section {
     background-blend-mode: overlay;
     padding: 10.5rem 2rem 1rem;
@@ -962,12 +1030,12 @@ footer .terms {
     padding-right: 1.5rem;
   }
 
-  .logo h3 {
+  .navbar .logo h3 {
     font-size: 1.1rem;
     margin: 0;
   }
 
-  .logo img {
+  .navbar .logo img {
     width: 2rem;
   }
 
@@ -1029,6 +1097,10 @@ footer .terms {
 
   .hours img {
     max-width: 24.5rem;
+  }
+
+  footer .bottom {
+    padding-inline: 3rem;
   }
 }
 
