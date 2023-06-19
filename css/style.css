@@ -24,7 +24,7 @@
   --goldBack: #ae956d;
   --goldFont: #d9a554;
   --black: #151515;
-  --grey: #1f1f1f;
+  --gray: #1f1f1f;
   --white: #ffffff;
 }
 
@@ -259,7 +259,7 @@ form {
 .about {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background-color: var(--grey);
+  background-color: var(--gray);
   justify-items: center;
 }
 
@@ -348,7 +348,7 @@ form {
 .service-item .icon {
   width: 4rem;
   border: 2px solid var(--goldFont);
-  background: var(--grey);
+  background: var(--gray);
   padding: 0.6rem;
   border-radius: 50%;
   position: absolute;
@@ -360,7 +360,7 @@ form {
 }
 
 .featured {
-  background: var(--grey);
+  background: var(--gray);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -407,7 +407,7 @@ form {
 }
 
 .hours-chart {
-  background: var(--grey);
+  background: var(--gray);
   max-width: 28rem;
   padding: 2rem;
   display: flex;
@@ -469,7 +469,7 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 6rem 4rem;
-  background: var(--grey);
+  background: var(--gray);
 }
 
 .gallery h2 {
@@ -559,6 +559,66 @@ form {
 
 .member-social li:hover {
   transform: scale(1.2);
+}
+
+.testimonial {
+  background-color: var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 2rem;
+  gap: 6rem;
+}
+
+.client {
+  display: grid;
+  place-content: center;
+  position: relative;
+  border: 1px solid var(--goldFont);
+  padding: 1.2rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.client-pic {
+  width: 20rem;
+  position: relative;
+  z-index: 1;
+}
+
+.comment {
+  max-width: 22rem;
+}
+
+.gray {
+  background-color: var(--gray);
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+}
+
+.gold-quotes {
+  width: 4rem;
+  height: 5rem;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  z-index: 1;
+}
+
+.comment img {
+  width: 2rem;
+  height: 3rem;
+}
+
+.comment h2 {
+  padding-bottom: 2rem;
+}
+
+.comment span {
+  color: var(--white);
 }
 
 @media (max-width: 1200px) {
@@ -789,6 +849,10 @@ form {
 
   .hours {
     flex-direction: column-reverse;
+  }
+
+  .testimonial {
+    flex-direction: column;
   }
 
   .collage {
