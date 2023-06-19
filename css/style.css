@@ -1045,6 +1045,7 @@ footer .terms {
   }
 
   .navbar .links {
+    width: 100%;
     padding: 1.4rem 0;
     gap: 1rem;
   }
