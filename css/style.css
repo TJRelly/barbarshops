@@ -668,7 +668,7 @@ form {
 
 .book h2 {
   color: var(--white);
-  border-right: 1px solid gold;
+  border-right: 1px solid var(--goldFont);
   padding-right: 3rem;
 }
 
@@ -753,6 +753,14 @@ footer .terms {
   width: 1.2rem;
 }
 
+.contacts a {
+  color: var(--white);
+}
+
+.contacts a:visited {
+  color: var(--goldFont);
+}
+
 .newsletter {
   display: flex;
   flex-direction: column;
@@ -829,6 +837,10 @@ footer .terms {
 
   .hours img {
     max-width: 27.5rem;
+  }
+
+  .gray-quotes {
+    display: none;
   }
 
   .scrolled {

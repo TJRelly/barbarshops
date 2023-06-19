@@ -7,6 +7,11 @@ for (const btn of menuBtn) {
   btn.onclick = toggleMenu
 }
 
+function toggleMenu() {
+  nav.classList.toggle("show-nav")
+  navLeft.classList.toggle("overlay")
+}
+
 for (const member of members) {
   const memberImg = member.querySelector("img")
   const socials = member.querySelector(".member-social")
@@ -25,10 +30,6 @@ function toggleSocialsOff(memberImg, socials) {
   memberImg.style.opacity = ""
 }
 
-function toggleMenu() {
-  nav.classList.toggle("show-nav")
-  navLeft.classList.toggle("overlay")
-}
 
 document.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
