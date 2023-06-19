@@ -124,13 +124,13 @@ h2 {
 }
 
 .logo h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 200;
   color: var(--white);
 }
 
 .logo img {
-  width: 2.5rem;
+  width: 2rem;
 }
 
 .navbar .logo {
@@ -166,7 +166,7 @@ h2 {
   text-decoration: none;
   color: var(--white);
   font-family: "Accord", sans-serif;
-  font-size: 1.3rem;
+  /* font-size: 1.15rem; */
   font-weight: 500;
 }
 
@@ -790,80 +790,6 @@ footer .terms {
     padding: 8rem 2rem 3rem;
   }
 
-  .navbar {
-    gap: 1rem;
-    padding: 2rem;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .hero {
-    max-width: 22rem;
-    margin: 4rem 5rem;
-  }
-
-  .logo h3 {
-    margin: 0;
-    font-size: larger;
-  }
-
-  .logo img {
-    width: 2rem;
-  }
-
-  .logo,
-  .links,
-  .social {
-    margin: 0;
-    padding: 0;
-  }
-
-  .links {
-    padding-bottom: 0.5rem;
-  }
-
-  .service,
-  .meet .team {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .featured .icons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    gap: 2.5rem;
-  }
-
-  .hours img {
-    max-width: 27.5rem;
-  }
-
-  .gray-quotes {
-    display: none;
-  }
-
-  .scrolled {
-    padding: 1rem 2rem;
-  }
-
-  footer .top {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 875px) {
-  body {
-    position: relative;
-  }
-
-  .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
-      url(../img/barber2.jpg);
-    background-size: cover;
-    padding: 8.75rem 2rem 4rem;
-  }
-
   nav .links,
   nav .social {
     display: none;
@@ -904,6 +830,7 @@ footer .terms {
     height: 100vh;
     position: absolute;
     right: 0;
+    transition: 0.5s ease-in;
   }
 
   .show-nav.scrolled {
@@ -974,6 +901,73 @@ footer .terms {
 
   .scrolled {
     padding: 1rem 2rem;
+  }
+
+  .hero {
+    max-width: 22rem;
+    margin: 4rem 5rem;
+  }
+
+  .logo h3 {
+    margin: 0;
+    font-size: larger;
+  }
+
+  .logo img {
+    width: 2rem;
+  }
+
+  .logo,
+  .links,
+  .social {
+    margin: 0;
+    padding: 0;
+  }
+
+  .links {
+    padding-bottom: 0.5rem;
+  }
+
+  .service,
+  .meet .team {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .featured .icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 2.5rem;
+  }
+
+  .hours img {
+    max-width: 27.5rem;
+  }
+
+  .gray-quotes {
+    display: none;
+  }
+
+  .scrolled {
+    padding: 1rem 2rem;
+  }
+
+  footer .top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 875px) {
+  body {
+    position: relative;
+  }
+
+  .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+      url(../img/barber2.jpg);
+    background-size: cover;
+    padding: 8.75rem 2rem 4rem;
   }
 
   .hero-section {
