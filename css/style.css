@@ -1039,6 +1039,22 @@ footer .terms {
   }
 }
 
+@media (max-width: 875px) and (orientation: landscape) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .navbar .links {
+    padding: 1.4rem 0;
+    gap: 1rem;
+  }
+
+  .navbar .social {
+    padding: 0;
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-section {
     background-blend-mode: overlay;
