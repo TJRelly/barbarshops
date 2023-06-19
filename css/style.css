@@ -581,16 +581,17 @@ form {
 }
 
 .client-pic {
-  width: 20rem;
+  width: 18rem;
   position: relative;
   z-index: 1;
 }
 
 .comment {
   max-width: 22rem;
+  min-width: 20rem;
 }
 
-.gray {
+.gray-box {
   background-color: var(--gray);
   width: 3rem;
   height: 3rem;
@@ -608,17 +609,90 @@ form {
   z-index: 1;
 }
 
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.gray-quotes {
+  position: absolute;
+  bottom: 40px;
+  left: 110px;
+}
+
 .comment img {
   width: 2rem;
   height: 3rem;
 }
 
-.comment h2 {
-  padding-bottom: 2rem;
-}
-
 .comment span {
   color: var(--white);
+}
+
+.gold-text {
+  color: var(--goldFont);
+}
+
+.appointment {
+  display: flex;
+  place-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(../img/barbershop.png);
+  background-size: cover;
+  min-height: 30rem;
+}
+
+.book {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background: var(--black);
+  width: 100%;
+  padding: 3rem 4rem;
+}
+
+.book p,
+.book h2 {
+  max-width: 28rem;
+}
+
+.book h2 {
+  border-right: 1px solid gold;
+  padding-right: 3rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: var(--gray);
+  color: var(--white);
+}
+
+footer .top {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6rem 8rem;
+  gap: 6rem;
+  place-content: center;
+  border-bottom: 1px solid gold;
+}
+
+footer .bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 2rem 7rem;
+}
+
+footer .terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 @media (max-width: 1200px) {
@@ -681,6 +755,7 @@ form {
 .scrolled {
   padding: 1rem 2rem;
 }
+
 
 @media (max-width: 875px) {
   body {
@@ -860,6 +935,17 @@ form {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+
+  .book {
+    height: 100%;
+  }
+
+  .book h2 {
+    border-right: none;
+    border-bottom: 1px solid gold;
+    padding-bottom: 3rem;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -944,9 +1030,6 @@ form {
   .hours img {
     max-width: 24.5rem;
   }
-}
-
-footer {
 }
 
 /******************************************
