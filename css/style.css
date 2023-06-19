@@ -371,6 +371,7 @@ form {
 .featured .title {
   color: var(--goldFont);
   padding: 6rem 0 3rem 0;
+  text-align: center;
 }
 
 .featured .icons {
@@ -416,7 +417,7 @@ form {
 
 .hours-chart h2 {
   padding-bottom: 1.5rem;
-  align-self: center;
+  text-align: center;
 }
 
 .hours-chart p {
@@ -439,7 +440,7 @@ form {
   padding-top: 2rem;
 }
 
-.hours-img {
+.hours-frame {
   position: relative;
   border: 1px solid var(--goldFont);
 }
@@ -461,7 +462,7 @@ form {
   border-left: 50px solid var(--goldBack);
   border-right: 50px solid var(--black);
   border-bottom: 50px solid var(--goldBack);
-  max-width: 30rem;
+  /* max-width: 30rem; */
 }
 
 .gallery {
@@ -474,6 +475,7 @@ form {
 
 .gallery h2 {
   padding-bottom: 4rem;
+  text-align: center;
 }
 
 .collage {
@@ -503,7 +505,11 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 4rem;
+  padding: 6rem 2rem;
+}
+
+.meet h2 {
+  text-align: center;
 }
 
 .team {
@@ -679,7 +685,9 @@ footer .top {
   padding: 6rem 2rem;
   gap: 4rem;
   place-content: center;
+  padding: 2rem;
   border-bottom: 1px solid var(--goldFont);
+  font-size: smaller;
 }
 
 footer .bottom {
@@ -688,6 +696,7 @@ footer .bottom {
   gap: 2rem;
   justify-content: space-between;
   padding: 2rem 7rem;
+  font-size: smaller;
 }
 
 footer .terms {
@@ -704,6 +713,10 @@ footer .terms {
   max-width: 25rem;
 }
 
+.company-info h3 {
+  font-size: 1.2rem;
+}
+
 .company-info ul {
   list-style: none;
 }
@@ -711,6 +724,10 @@ footer .terms {
 .company-info .social {
   display: flex;
   gap: 1.5rem;
+}
+
+.company-info img {
+  width: 1.75rem;
 }
 
 .contacts {
@@ -1096,11 +1113,20 @@ footer .terms {
   }
 
   .hours img {
-    max-width: 24.5rem;
+    max-width: 20rem;
+  }
+
+  footer .top {
+    padding: 5rem;
+    border: 1px solid gold;
   }
 
   footer .bottom {
     padding-inline: 3rem;
+  }
+
+  .client img {
+    max-width: 16rem;
   }
 }
 
