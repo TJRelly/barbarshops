@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
 /* Box Model Hack */
 * {
   box-sizing: border-box;
@@ -28,16 +32,6 @@
   --white: #ffffff;
 }
 
-@font-face {
-  font-family: Worldwide;
-  src: url(/fonts/Worldwide.ttf);
-}
-
-@font-face {
-  font-family: Accord;
-  src: url(/fonts/Accord-Light.ttf);
-}
-
 html {
   scroll-behavior: smooth;
   width: 91.5%;
@@ -53,7 +47,7 @@ body {
   margin: 0;
   padding: 0;
   font-weight: 100;
-  font-family: "Worldwide";
+  font-family: "Playfair Display", serif;
 }
 
 /******************************************
@@ -62,6 +56,13 @@ body {
 h2 {
   font-size: 2.5rem;
   color: var(--goldFont);
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--white);
+  font-weight: 100;
 }
 
 .hero-section {
@@ -120,12 +121,11 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Worldwide", serif;
 }
 
 .logo h3 {
-  font-size: 1.5rem;
-  font-weight: 200;
+  font-size: 1.8rem;
+  font-weight: 500;
   color: var(--white);
 }
 
@@ -165,9 +165,8 @@ h2 {
   list-style: none;
   text-decoration: none;
   color: var(--white);
-  font-family: "Accord", sans-serif;
-  /* font-size: 1.15rem; */
-  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 .links a:hover {
@@ -187,13 +186,6 @@ h2 {
   color: var(--goldFont);
 }
 
-p {
-  font-family: "Accord";
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--white);
-}
-
 .hero {
   height: 100%;
   display: flex;
@@ -204,8 +196,6 @@ p {
 
 .hero h1 {
   font-size: 4.6rem;
-  font-family: "Worldwide", serif;
-  font-weight: 100;
 }
 
 .hero p {
@@ -213,7 +203,7 @@ p {
 }
 
 .hero a {
-  font-family: "Accord";
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   text-decoration: none;
 }
@@ -304,7 +294,7 @@ form {
 }
 
 .our-services h3 {
-  font-family: "Accord";
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
 }
 
@@ -328,15 +318,21 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   position: relative;
 }
 
 .service-item span {
   color: var(--goldFont);
-  font-family: "Accord";
   font-weight: bold;
+}
+
+.service-item .title {
+  letter-spacing: 0.1rem;
+}
+
+.service-item .cost {
+  font-family: "Roboto", sans-serif;
 }
 
 .service-item .pic {
@@ -355,7 +351,7 @@ form {
   top: 59%;
 }
 
-.service-item .charge {
+.service-item .cost {
   padding: 0.5rem 0 1.5rem;
 }
 
@@ -536,7 +532,7 @@ form {
 
 .team .member span {
   font-weight: 100;
-  font-family: Accord;
+  font-family: "Roboto", sans-serif;
   font-size: medium;
 }
 
@@ -624,8 +620,8 @@ form {
 
 .gray-quotes {
   position: absolute;
-  bottom: 40px;
-  left: 110px;
+  bottom: 0;
+  left: 20rem;
 }
 
 .comment img {
@@ -675,6 +671,7 @@ form {
 footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: var(--gray);
   color: var(--white);
 }
@@ -682,16 +679,15 @@ footer {
 footer .top {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 6rem 2rem;
+  padding: 6rem 4rem;
   gap: 4rem;
-  place-content: center;
-  padding: 2rem;
   border-bottom: 1px solid var(--goldFont);
   font-size: smaller;
 }
 
 footer .bottom {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
@@ -744,6 +740,7 @@ footer .terms {
 }
 
 .contacts li {
+  font-family: "Roboto", sans-serif;
   display: flex;
   gap: 0.5rem;
   align-items: center;
@@ -754,6 +751,7 @@ footer .terms {
 }
 
 .contacts a {
+  font-family: "Roboto", sans-serif;
   color: var(--white);
 }
 
@@ -770,8 +768,9 @@ footer .terms {
 }
 
 .subscribe {
-  max-width: 25rem;
   display: flex;
+  gap: 0;
+  width: 100%;
 }
 
 .subscribe label {
@@ -781,6 +780,7 @@ footer .terms {
 .subscribe input {
   padding: 0.5rem 1rem;
   border: 1px solid var(--goldFont);
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -945,9 +945,9 @@ footer .terms {
     max-width: 27.5rem;
   }
 
-  .gray-quotes {
+  /* .gray-quotes {
     display: none;
-  }
+  } */
 
   .scrolled {
     padding: 1rem 2rem;
@@ -1140,8 +1140,7 @@ footer .terms {
   }
 
   footer .top {
-    padding: 5rem;
-    border: 1px solid gold;
+    padding: 3rem;
   }
 
   footer .bottom {
