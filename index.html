@@ -10,6 +10,13 @@
 	<!-- external CSS link -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="css/lightbox.css" rel="stylesheet" />
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="/img/barber icon.png" />
+
+	<!-- Google jQuery link -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 	<title>Barbershops Inc.</title>
 </head>
@@ -51,8 +58,8 @@
 			<p>Get the perfect cut every time at the barbershop that cares about you and your personal style</p>
 
 			<form action="#appointment">
-				<button type="submit" class="gold">Appointment</button>
-				<button type="submit" class="clear">Contact us</button>
+				<button type="submit" class="gold-btn">Appointment</button>
+				<button type="submit" class="clear-btn">Contact us</button>
 			</form>
 		</section>
 	</section>
@@ -69,7 +76,7 @@
 				belive that beauty should be accessible to everyone, whis why we offer affordable and innovative
 				products that are easy to use and deliver professional results.</p>
 			<form action="#meet">
-				<button type="submit" class="gold">Meet our team</button>
+				<button type="submit" class="gold-btn">Meet our team</button>
 			</form>
 		</div>
 	</section>
@@ -139,20 +146,20 @@
 		<h2>Featured Gallery</h2>
 		<div class="collage">
 			<div class="collage-item">
-				<img src="img/collage-1.jpg" alt="haircut">
-				<img src="img/collage-2.jpg" alt="haircut">
+				<a href="img/collage-1.jpg" data-lightbox="haircut"><img src="img/collage-1.jpg" alt="haircut"/></a>
+				<a href="img/collage-2.jpg" data-lightbox="haircut"><img src="img/collage-2.jpg" alt="haircut"/></a>
 			</div>
 			<div class="collage-item even">
-				<img src="img/collage-3.jpg" alt="haircut">
-				<img src="img/collage-4.jpg" alt="haircut">
+				<a href="img/collage-3.jpg" data-lightbox="haircut"><img src="img/collage-3.jpg" alt="haircut"/></a>
+				<a href="img/collage-4.jpg" data-lightbox="haircut"><img src="img/collage-4.jpg" alt="haircut"/></a>
 			</div>
 			<div class="collage-item">
-				<img src="img/collage-5.jpg" alt="haircut">
-				<img src="img/collage-6.jpg" alt="haircut">
+				<a href="img/collage-5.jpg" data-lightbox="haircut"><img src="img/collage-5.jpg" alt="haircut"/></a>
+				<a href="img/collage-6.jpg" data-lightbox="haircut"><img src="img/collage-6.jpg" alt="haircut"/></a>
 			</div>
 			<div class="collage-item even">
-				<img src="img/collage-7.jpg" alt="haircut">
-				<img src="img/collage-8.jpg" alt="haircut">
+				<a href="img/collage-7.jpg" data-lightbox="haircut"><img src="img/collage-7.jpg" alt="haircut"/></a>
+				<a href="img/collage-8.jpg" data-lightbox="haircut"><img src="img/collage-8.jpg" alt="haircut"/></a>
 			</div>
 		</div>
 	</section>
@@ -227,7 +234,7 @@
 			<h2>Book your appointment online</h2>
 			<p>Schedule your next haircut service online. Our online booking in fast and available 24/7. Book now and
 				get ready to look your best.</p>
-			<button class="gold">Make Appointment</button>
+			<button class="gold-btn">Make Appointment</button>
 		</div>
 	</section>
 
@@ -264,7 +271,7 @@
 				<form action="" class="subscribe">
 					<label for="email"></label>
 					<input type="text" id="fname" name="fname" placeholder="Enter your email">
-					<button type="submit" class="gold">Subscribe</button>
+					<button type="submit" class="gold-btn">Subscribe</button>
 				</form>	
 			</div>
 		</section>
@@ -280,6 +287,16 @@
 	</footer>
 
 	<script type="text/javascript" src="js/main.js"></script>
+	
+	<!-- lightbox -->
+	<script src="js/lightbox.js"></script>
+	<script>
+		lightbox.option({
+		  'maxHeight': 500,
+		  'wrapAround': true,
+		  'positionFromTop': 200,
+		})
+	</script>
 </body>
 
 </html>

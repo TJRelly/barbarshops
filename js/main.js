@@ -30,7 +30,6 @@ function toggleSocialsOff(memberImg, socials) {
   memberImg.style.opacity = ""
 }
 
-
 document.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     nav.classList.add("scrolled")
@@ -38,3 +37,4 @@ document.addEventListener("scroll", () => {
     nav.classList.remove("scrolled")
   }
 })
+
