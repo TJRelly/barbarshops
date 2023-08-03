@@ -1,7 +1,7 @@
 # Barbarshops Inc.
 
 [Barbarshops Inc.](https://terrelljackson.vercel.app/) Responsive business landing page.
-This portfolio uses the following technologies:
+This website uses the following technologies:
 
 ### Technologies: 
 - Semantic HTML
