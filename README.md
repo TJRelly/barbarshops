@@ -1,6 +1,6 @@
-# Barbarshops Inc.
+# Barbershops Inc.
 
-[Barbarshops Inc.](https://tjrelly.github.io/barbershops/){:target="_blank"} Responsive business landing page.
+<a href="https://tjrelly.github.io/barbershops" target="_blank">Barbershops Inc.</a> Responsive business landing page.
 This website uses the following technologies:
 
 ### Technologies: 
@@ -14,9 +14,9 @@ Throughout this project, I displayed a strong sense of determination, flexibilit
 
 ### Website Deployed
 
-You can find the project website here: [Live Site](https://tjrelly.github.io/barbershops/){:target="_blank"}
+You can find the project website here: <a href="https://tjrelly.github.io/barbershops" target="_blank">Barbershops Inc.</a>
 
 ---
 ### Website Gif
 
-![barbershops-inc-gif](https://github.com/TJRelly/barbershops/assets/94482664/c1cea277-3dc9-4e33-9dfb-4227b8b7cd82){:target="_blank"}
+![barbershops-inc-gif](https://github.com/TJRelly/barbershops/assets/94482664/c1cea277-3dc9-4e33-9dfb-4227b8b7cd82)
