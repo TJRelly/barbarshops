@@ -1,6 +1,6 @@
 # Barbarshops Inc.
 
-[Barbarshops Inc.](https://terrelljackson.vercel.app/) Responsive business landing page.
+[Barbarshops Inc.](https://tjrelly.github.io/barbershops/) Responsive business landing page.
 This website uses the following technologies:
 
 ### Technologies: 
